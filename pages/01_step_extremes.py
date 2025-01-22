@@ -23,8 +23,7 @@ image4_rotated = image4.rotate(270, expand=True)
 cols[2].image(image4_rotated, caption="Lower Calf Creek Falls")
 
 st.write("""Day: October 5, 2024 with 29,431 steps. Outside of the Utah trip, August 26, 2023 with 28,505 steps. 
-         That day I went on a hike to a lake in the morning, then a Broncos preseason game in the evening.
-         I remember being completely exhausted on the way home from the game.""")
+         That day I went on a hike to a lake in the morning, then a Broncos preseason game in the evening.""")
 
 cols = st.columns(3)
 
