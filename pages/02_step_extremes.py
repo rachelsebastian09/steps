@@ -11,13 +11,16 @@ st.write("""Week: September 30, 2024 - October 6, 2024. I averaged 22,947 steps 
 
 cols = st.columns(3)
 
+# Put a border around the first image & display
 stars = Image.open("images/stars.jpg")
 stars_border = ImageOps.expand(stars, border=4, fill="lightgrey")
 cols[0].image(stars_border, caption="Milky Way")
 
+# Displayed the two landscape photos in the second column
 cols[1].image("images/bryce.jpg", caption="Bryce Canyon")
 cols[1].image("images/arches.jpg", caption="Windows Arch")
 
+# Rotate the fourth image to the correct orientation and display
 image4 = Image.open("images/waterfall.jpg")
 image4_rotated = image4.rotate(270, expand=True) 
 cols[2].image(image4_rotated, caption="Lower Calf Creek Falls")
@@ -27,6 +30,7 @@ st.write("""Day: October 5, 2024 with 29,431 steps. Outside of the Utah trip, Au
 
 cols = st.columns(3)
 
+# Display Oct 5 images
 cols[0].image("images/lake.jpg", caption="Brainard Lake")
 cols[1].image("images/moose.jpg", caption="Moose!")
 cols[2].image("images/broncos.jpg", caption="Broncos Game")
