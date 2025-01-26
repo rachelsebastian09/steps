@@ -6,7 +6,7 @@ from datetime import timedelta
 st.title("Step Analysis")
 
 # Read in data
-df = pd.read_csv('E:\Projects\Rachel\Steps\daily_steps.csv')
+df = pd.read_csv('daily_steps.csv')
 df["date"] = pd.to_datetime(df["date"])
 
 # Create sidbar for user inputs
