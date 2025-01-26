@@ -1,0 +1,18 @@
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+st.title("2025 Predictions")
+
+st.subheader("Testing for Seasonality")
+
+df = pd.read_csv("daily_steps.csv")
+df['date'] = pd.to_datetime(df['date'])
+df1 = df.set_index('date')
+monthly_steps = df1.resample('ME').mean()
+
+# Decompose the time series into trend, seasonal, and residual components
+decomposition = seasonal_decompose(monthly_steps, model='additive', period = 12)  # period=12 for monthly data with yearly seasonality
+decomposition.plot()
+plt.show()
