@@ -1,6 +1,0 @@
-# check python version
-python -V
-
-pip install --upgrade pip
-
-pip install streamlit plotly Image
