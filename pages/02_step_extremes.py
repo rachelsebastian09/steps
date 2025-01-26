@@ -20,6 +20,8 @@ cols[0].image(stars_border, caption="Milky Way")
 cols[1].image("images/bryce.jpg", caption="Bryce Canyon")
 cols[1].image("images/arches.JPG", caption="Windows Arch")
 
+st.write("")
+
 # Rotate the fourth image to the correct orientation and display
 image4 = Image.open("images/waterfall.jpg")
 image4_rotated = image4.rotate(270, expand=True) 

@@ -21,8 +21,6 @@ df = pd.read_csv('daily_steps.csv')
 
 col1, arrow1, col2, arrow2, col3, col4 = st.columns([0.7, 0.4, 0.9, 0.4, 0.8, 1.5])
 
-# col1, col2, col3 = st.columns([0.5, 1, 1])
-
 with col1:
     fitbit = Image.open("images/fitbit.jpg")
 
@@ -83,6 +81,30 @@ with col4:
     st.write("#### Load")
 
     st.write("""Saved a new csv with the processed information in the desired location for building this dashboard.""")
-             
-st.subheader("Assumptions & Predictions")
 
+st.divider()
+
+col1_, padding, col2_ = st.columns([1, 0.1, 1])
+
+with col1_:
+    st.subheader("Assumptions")
+
+    st.markdown("""
+    **Time:**
+    - All steps before 7/1/2023 occured in Eastern Time
+    - All steps on or after 7/1/2023 occured in Mountain Time
+    - Reasoning: I moved from Eastern to Mountain Time on 7/1/2023. In the raw files, 
+                all time was in UTC, and there was no easy way to convert back to local time for every scenerio.
+    - Everything needed to be in local time for consistency of daily patterns
+    """)
+
+with col2_:
+
+    st.subheader("")
+
+    st.markdown("""
+    **Missing Values:**
+    - Any days with no values were set to the 10th percentile of the dataset: 4,014 steps
+    - Reasoning: I usually don't wear my watch on slower days. Sometimes I forget to wear it, 
+                but most of the time it's on days when I don't go anywhere.
+    """)
