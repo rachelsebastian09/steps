@@ -57,15 +57,32 @@ avg_steps = filtered_df.groupby('plotting_period')['steps'].mean().reset_index()
 avg_steps['plotting_period'] = avg_steps['plotting_period'].astype(str)
 
 # Plot average steps
-fig = px.line(avg_steps, x='plotting_period', y='steps', title='Average Steps per Day', labels={'plotting_period': time_period_choice, 'steps': 'Steps'})
+fig = px.line(avg_steps, x='plotting_period', y='steps')
 fig.update_yaxes(range=[0, avg_steps["steps"].max() + 1000])
+
+fig.update_layout(
+    title=dict(
+        text="Average Steps per Day",
+        font=dict(size=24)
+    ),
+    xaxis=dict(
+        title=time_period_choice,
+        title_font=dict(size=18),
+        tickfont=dict(size=14)
+    ),
+    yaxis=dict(
+        title="Steps",
+        title_font=dict(size=18),
+        tickfont=dict(size=14) 
+    )
+)
 
 st.plotly_chart(fig)
 
 st.header("Interpretation")
 st.write("""Overall, my average steps monthly are decreasing over time. However,
          I have more variation in my steps in the past year than before, which can be explained due to lifestyle changes.
-         In the summer of 2023, I graduated from college and moved to Colorado. This seems to have lead to more sedentary day to day life,
+         In the summer of 2023, I graduated from college, moved states, and started an office job. This seems to have lead to more sedentary day to day life,
          but making the most of my PTO and weekends in the mountains.""")
 
 # Display table with step stats by year

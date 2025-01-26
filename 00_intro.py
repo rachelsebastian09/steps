@@ -6,14 +6,14 @@ st.set_page_config(layout="wide")
 
 st.title("Stepping into the New Year")
 
-st.write("""Fitness trackers like Fitbit have transformed how we monitor daily activity, providing valuable data on step counts over time. 
+st.write("""Fitness trackers like Fitbit have transformed how we monitor daily activity, providing data on step counts over time. 
          This project explores my step count data from 2022 to 2024 to identify trends and patterns in my steps.
          Using time-series analysis and modeling techniques, I will analyze past steps and forecast future step counts.""")
 
-st.header("Data Ingestion")
+st.subheader("Data Ingestion")
 
 st.markdown(
-    'For full details on the ingestion process, view the <a href="https://www.youtube.com/watch?v=BBJa32lCaaY" target="_blank">script</a>.',
+    'For full details on the ingestion process, go to extract_data.py in the GitHub <a href="https://github.com/rachelsebastian09/steps/tree/main" target="_blank">repo</a>.',
     unsafe_allow_html=True
 )
 
@@ -31,7 +31,7 @@ with col1:
     st.write("")
     st.write("")
 
-    st.image(fitbit_border, width=200, caption="My Fitbit")
+    st.image(fitbit_border, width=200, caption="Fitbit Inspire 2")
 
 with arrow1:
     st.write("")

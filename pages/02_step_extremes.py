@@ -38,7 +38,7 @@ cols[1].image("images/moose.jpg", caption="Moose!")
 cols[2].image("images/broncos.jpg", caption="Broncos Game")
 
 st.header("Least Steps")
-st.write("""Month: In both June 2023 and Nov-Dec 2024, I averaged less than 7,000 steps/day. June 2023 was the time between when I graduated college and moved,
-         so I was out of a routine. Not sure about November and December of last year other than the weather.""")
+st.write("""Month: In both June 2023 and Nov-Dec 2024, I averaged less than 7,000 steps/day. June 2023 I was between college and a job, so I was out of a routine. 
+         Not sure about November and December of last year other than the weather.""")
 st.write("""Performing meaningful analysis by week or day is more difficult since most of the times looked at had lots of missing values. 
          Unfortunately there were no pictures to be found on my least stepped days.""")
