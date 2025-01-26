@@ -12,13 +12,13 @@ st.write("""Week: September 30, 2024 - October 6, 2024. I averaged 22,947 steps 
 cols = st.columns(3)
 
 # Put a border around the first image & display
-stars = Image.open("images/stars.jpg")
+stars = Image.open("images/stars.JPG")
 stars_border = ImageOps.expand(stars, border=4, fill="lightgrey")
 cols[0].image(stars_border, caption="Milky Way")
 
 # Displayed the two landscape photos in the second column
 cols[1].image("images/bryce.jpg", caption="Bryce Canyon")
-cols[1].image("images/arches.jpg", caption="Windows Arch")
+cols[1].image("images/arches.JPG", caption="Windows Arch")
 
 # Rotate the fourth image to the correct orientation and display
 image4 = Image.open("images/waterfall.jpg")
