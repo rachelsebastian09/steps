@@ -3,3 +3,5 @@ plotly
 pillow
 pandas
 numpy
+matplotlib
+statsmodels
