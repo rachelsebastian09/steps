@@ -19,19 +19,21 @@ st.markdown(
 
 df = pd.read_csv('daily_steps.csv')
 
-col1, arrow1, col2, arrow2, col3, col4 = st.columns([0.7, 0.4, 0.9, 0.4, 0.8, 1.5])
+col1, arrow1, col2, arrow2, col3, col4 = st.columns([0.5, 0.3, 0.8, 0.3, 0.8, 1.3])
 
 with col1:
     fitbit = Image.open("images/fitbit.jpg")
 
     # Add a white border
-    fitbit_border = ImageOps.expand(fitbit, border=100, fill="white")
+    fitbit_border = ImageOps.expand(fitbit, border=50, fill="white")
 
     st.write("")
     st.write("")
     st.write("")
+    st.write("")
+    st.write("")
 
-    st.image(fitbit_border, width=200, caption="Fitbit Inspire 2")
+    st.image(fitbit_border, caption="Fitbit Inspire 2")
 
 with arrow1:
     st.write("")
@@ -50,7 +52,7 @@ with col2:
     st.write("")
     st.write("")
 
-    st.image("images/spreadsheets.png", caption="Data Export")
+    st.image("images/spreadsheets.png", use_container_width=True, caption="Data Export")
 
 with arrow2:
     st.write("")
@@ -65,7 +67,7 @@ with arrow2:
     st.image("images/arrow.jpg")
 
 with col3:
-    st.dataframe(df)
+    st.dataframe(df, hide_index=True)
 
 with col4:
 
