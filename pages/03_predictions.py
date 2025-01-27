@@ -80,7 +80,7 @@ st.plotly_chart(fig)
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("#### Holt Winter's Forecast")
+    st.markdown("#### Holt-Winters Forecast")
     st.write("""
     - Smooths time series data
     - Accounts for seasonality
