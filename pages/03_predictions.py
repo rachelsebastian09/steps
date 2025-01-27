@@ -30,7 +30,7 @@ fig.add_trace(go.Scatter(
     x=forecast_df.index, 
     y=forecast_df['holtwinters'], 
     mode='lines', 
-    name="Holt Winter's Forecast", 
+    name="Holt-Winters Forecast", 
     line=dict(color='red', dash='dash')
 ))
 
